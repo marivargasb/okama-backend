@@ -51,6 +51,9 @@ mongoose.connect(config.uri,{ useNewUrlParser: true } ,(err) => {
 // settings
 app.set('port', process.env.PORT || 8000);
 
+app.get('/', (req, res) =>{
+  res.send('backend okama')
+})
 
 // static files
 app.use(express.static(path.join(__dirname, 'public')));
