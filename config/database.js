@@ -5,5 +5,5 @@ module.exports = {
   uri: 'mongodb+srv://marivargas:86161177@cluster0-brhfo.mongodb.net/test?retryWrites=true&w=majority', // Databse URI and database name
   useCreateIndex: true,
   useNewUrlParser: true,
-  db: 'okama' // Database name
+  db: 'okama-backend' // Database name
 }
