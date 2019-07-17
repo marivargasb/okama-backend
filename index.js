@@ -48,7 +48,14 @@ mongoose.connect(config.uri,{ useNewUrlParser: true } ,(err) => {
 //app.get('*', (req, res) => {
 //    res.sendFile(path.join(__dirname + '../frontend/tubekids/dist/index.html'));
 //  });
+// settings
+app.set('port', process.env.PORT || 8000);
 
 
-app.listen(8000, () => 
-console.log('TODO API is listening on port 8000!'));
+// static files
+app.use(express.static(path.join(__dirname, 'public')));
+
+// Server is listening
+app.listen(app.get('port'), () => {
+  console.log('Server on port', app.get('port'));
+});
