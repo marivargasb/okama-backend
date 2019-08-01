@@ -31,6 +31,7 @@ mongoose.connect(config.uri,{ useNewUrlParser: true } ,(err) => {
   
  // app.use(app.router);
  app.use(cors({ origin: 'http://localhost:4200' }));
+ app.use(cors({ origin: 'https://okamasuei.herokuapp.com' }));
  app.use(bodyParser.urlencoded({ extended: true })); // parse application/x-www-form-urlencoded
  app.use(bodyParser.json()); // parse application/json
 //app.use(express.static(__dirname + '/../frontend/')); // Provide static directory for frontend
